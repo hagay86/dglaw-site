@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rankings & Memberships | Dardik Gross | Leading Israeli Law Firm</title>
+  <meta name="description" content="International recognition, local excellence. Dardik Gross is ranked among leading Israeli law firms with memberships in prestigious global networks."/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* Rankings page-specific styles */
+    .rankings-hero {
+      position: relative;
+      height: 75vh; min-height: 520px;
+      display: flex; align-items: flex-end;
+      overflow: hidden;
+    }
+    .rankings-hero-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      filter: brightness(0.5);
+    }
+    .rankings-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 50%, rgba(26,58,92,0.4) 100%);
+    }
+    .rankings-hero-content {
+      position: relative; z-index: 2;
+      padding: 0 60px 70px;
+      color: #fff;
+      max-width: 780px;
+    }
+    .rankings-hero-content .eyebrow {
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      opacity: 0.7; margin-bottom: 16px;
+      display: block;
+    }
+    .rankings-hero-content h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(32px, 4.5vw, 54px);
+      font-weight: 500; line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .rankings-hero-content p {
+      font-size: 17px; line-height: 1.7;
+      color: rgba(255,255,255,0.85);
+      max-width: 560px;
+    }
+
+    /* Stats section */
+    .stats-section {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+    }
+    .stat-item {
+      background: var(--white);
+      text-align: center;
+      padding: 52px 28px;
+      transition: background 0.3s;
+    }
+    .stat-item:hover { background: var(--off-white); }
+    .stat-item h3 {
+      font-family: var(--font-serif);
+      font-size: 48px; font-weight: 600;
+      color: var(--black);
+      margin-bottom: 10px;
+      line-height: 1;
+    }
+    .stat-item p {
+      font-size: 12px; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--mid-grey);
+    }
+
+    /* Rankings grid */
+    .rankings-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-top: 48px;
+    }
+    .ranking-card {
+      background: var(--white);
+      border: 1px solid var(--light-grey);
+      padding: 44px 40px;
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.4s, transform 0.4s;
+    }
+    .ranking-card:hover {
+      box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+      transform: translateY(-6px);
+    }
+    .ranking-card .ranking-num {
+      font-family: var(--font-serif);
+      font-size: 72px; font-weight: 600;
+      color: rgba(26,26,26,0.04);
+      position: absolute;
+      top: 16px; right: 24px;
+      line-height: 1;
+    }
+    .ranking-badge {
+      display: inline-block;
+      font-size: 10px; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: 3px;
+      margin-bottom: 20px;
+    }
+    .badge-ranked {
+      background: rgba(26,26,26,0.06);
+      color: var(--black);
+    }
+    .badge-recognition {
+      background: rgba(26,26,26,0.06);
+      color: var(--black);
+    }
+    .badge-membership {
+      background: rgba(26,26,26,0.06);
+      color: var(--black);
+    }
+    .badge-department {
+      background: rgba(26,26,26,0.06);
+      color: var(--black);
+    }
+    .ranking-card h3 {
+      font-family: var(--font-serif);
+      font-size: 24px; font-weight: 500;
+      margin-bottom: 14px; line-height: 1.3;
+    }
+    .ranking-card p {
+      font-size: 15px; line-height: 1.75;
+      color: var(--dark-grey);
+      margin-bottom: 20px;
+    }
+    .ranking-card .arrow-link {
+      font-size: 12px; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--black);
+      text-decoration: none;
+      display: inline-flex; align-items: center; gap: 6px;
+      border-bottom: 1.5px solid var(--black);
+      padding-bottom: 2px;
+      transition: opacity 0.2s;
+    }
+    .ranking-card .arrow-link:hover { opacity: 0.6; }
+
+    /* Full-width image break */
+    .rankings-image-break {
+      position: relative;
+      height: 380px;
+      overflow: hidden;
+    }
+    .rankings-image-break img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center;
+      filter: grayscale(30%) brightness(0.7);
+    }
+    .rankings-image-break .image-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.1) 60%);
+      display: flex; align-items: center;
+      padding: 0 60px;
+    }
+    .rankings-image-break .image-overlay blockquote {
+      font-family: var(--font-serif);
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 500;
+      line-height: 1.4;
+      color: #fff;
+      max-width: 600px;
+    }
+
+    /* Why it matters */
+    .why-matters-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      margin-top: 60px;
+    }
+    .why-card {
+      background: var(--white);
+      padding: 52px 40px;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+    .why-card:hover { background: var(--off-white); }
+    .why-card-num {
+      font-family: var(--font-serif);
+      font-size: 40px; font-weight: 600;
+      color: rgba(26,26,26,0.05);
+      margin-bottom: 16px;
+      line-height: 1;
+    }
+    .why-card h3 {
+      font-family: var(--font-serif);
+      font-size: 22px; font-weight: 500;
+      margin-bottom: 16px; line-height: 1.3;
+    }
+    .why-card p {
+      font-size: 15px; color: var(--mid-grey);
+      line-height: 1.75;
+    }
+
+    /* Membership logos row */
+    .membership-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 80px;
+      flex-wrap: wrap;
+      padding: 20px 0;
+    }
+    .membership-item {
+      text-align: center;
+    }
+    .membership-item h4 {
+      font-family: var(--font-serif);
+      font-size: 20px; font-weight: 500;
+      margin-bottom: 8px;
+    }
+    .membership-item p {
+      font-size: 13px; color: var(--mid-grey);
+      max-width: 200px;
+    }
+
+    @media (max-width: 1024px) {
+      .stats-section { grid-template-columns: repeat(2, 1fr); }
+      .rankings-grid { grid-template-columns: 1fr; }
+      .why-matters-grid { grid-template-columns: 1fr; }
+      .membership-row { gap: 40px; }
+    }
+    @media (max-width: 768px) {
+      .rankings-hero { height: 60vh; min-height: 400px; }
+      .rankings-hero-content { padding: 0 24px 40px; }
+      .stats-section { grid-template-columns: 1fr; }
+      .stat-item { padding: 36px 20px; }
+      .stat-item h3 { font-size: 36px; }
+      .ranking-card { padding: 32px 24px; }
+      .rankings-image-break { height: 280px; }
+      .rankings-image-break .image-overlay { padding: 0 24px; }
+      .why-card { padding: 36px 24px; }
+    }
+  </style>
+  <link rel="stylesheet" href="accessibility.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header hero-dark-ui" id="siteHeader">
+    <a href="index.html" class="header-logo"><img src="logo-full-black.png" alt="Dardik Gross &amp; Co." class="header-logo-img"><span class="header-logo-caption" aria-hidden="true"><span>Dardik Gross</span><span>Law Firm</span></span></a>
+    <nav class="main-nav">
+      <a href="index.html">HOME</a>
+      <a href="about.html">FIRM PROFILE</a>
+      <div class="nav-dd-wrap">
+        <a href="expertise.html" aria-haspopup="true">PRACTICE AREAS<span class="nav-caret" aria-hidden="true"></span></a>
+        <div class="nav-dd">
+          <a href="practices/immigration-law.html">Immigration Law</a>
+          <a href="practices/civil-commercial.html">Civil &amp; Commercial Law</a>
+          <a href="practices/real-estate.html">Real Estate</a>
+          <a href="practices/corporate-ma.html">M&amp;A and Commercial Investments</a>
+          <a href="practices/employment.html">Labor Law</a>
+          <a href="practices/litigation-arbitration.html">Litigation &amp; Dispute Resolution</a>
+          <a href="practices/energy-infrastructure.html">Energy and Infrastructure</a>
+          <a href="practices/personal-law.html">Personal Law</a>
+          <a class="nav-dd-all" href="expertise.html">All practice areas →</a>
+        </div>
+      </div>
+      <a href="people.html">LAWYERS</a>
+      <a href="rankings.html" class="active">RANKINGS</a>
+      <a href="news.html">NEWS</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="rankings.html" class="active" hreflang="en" lang="en">E</a>
+        <span class="lang-divider">|</span>
+        <a href="he/rankings.html" hreflang="he" lang="he">ע</a>
+      </div>
+      <button class="menu-btn" id="menuBtn">Menu</button>
+    </div>
+  </header>
+
+  <!-- NAV OVERLAY -->
+  <div class="nav-overlay" id="navOverlay">
+    <button class="nav-close" id="navClose">&#x2715;</button>
+    <div class="nav-main">
+      <div class="nav-col">
+        <h3>Practices</h3>
+        <ul>
+          <li><a href="practices/immigration-law.html">Immigration Law</a></li>
+          <li><a href="practices/civil-commercial.html">Civil &amp; Commercial Law</a></li>
+          <li><a href="practices/real-estate.html">Real Estate Law</a></li>
+          <li><a href="practices/corporate-ma.html">M&amp;A and Commercial Investments</a></li>
+          <li><a href="practices/employment.html">Labor Law</a></li>
+          <li><a href="practices/litigation-arbitration.html">Litigation &amp; Dispute Resolution</a></li>
+          <li><a href="practices/energy-infrastructure.html">Energy and Infrastructure</a></li>
+          <li><a href="practices/personal-law.html">Personal Law</a></li>
+        </ul>
+      </div>
+      <div class="nav-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="expertise.html">Explore Expertise</a></li>
+          <li><a href="news.html">News &amp; Insights</a></li>
+          <li><a href="people.html">LAWYERS</a></li>
+          <li><a href="about.html">Firm Profile</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- RANKINGS & MEMBERSHIPS -->
+  <section class="section-dark rankings-dark" style="position:relative;overflow:hidden">
+    <div class="geo-shape geo-half-circle geo-intro-1"></div>
+    <div class="geo-shape geo-arc geo-intro-3"></div>
+    <div class="geo-shape geo-partial-rect geo-intro-2"></div>
+    <div class="geo-shape geo-quarter-rect geo-rankings-1-3"></div>
+    <div class="geo-shape geo-half-square geo-rankings-1-4"></div>
+    <div class="section-inner">
+      <p class="section-label">Our Rankings &amp; Memberships</p>
+      <h2 class="section-title">Proven credibility, internationally recognized</h2>
+      <p class="section-body" style="margin-bottom:16px">We are proud to be part of leading organizations and ranked by prestigious business intelligence companies.</p>
+
+      <div class="rankings-grid">
+        <div class="ranking-card value-card-geo">
+          <div class="value-geo value-geo-halfcircle"></div>
+          <span class="ranking-num">01</span>
+          <span class="ranking-badge badge-ranked">Ranked</span>
+          <img class="duns-card-logo" src="images/duns100-logo.jpg" alt="Dun's 100" width="240" height="240"/>
+          <h3>Dun's 100</h3>
+          <p>Recognized as a leading Israeli firm in International Commercial Law by Dun &amp; Bradstreet for 14 consecutive years (2011-2025). This is Israel's most prestigious annual ranking of law firms.</p>
+        </div>
+        <div class="ranking-card value-card-geo">
+          <div class="value-geo value-geo-rect"></div>
+          <span class="ranking-num">02</span>
+          <span class="ranking-badge badge-recognition">Recognition</span>
+          <img class="bdi-logo-img bdi-card-logo" src="images/bdi-code-logo.jpg" alt="BDI Code" width="963" height="1200"/>
+          <h3>BDI Code</h3>
+          <p>Ranked as an 'Outstanding Leader' and 'Leading Excellence Firm' in International Commercial Law by BDI-Coface, one of Israel's foremost business rating agencies.</p>
+        </div>
+        <div class="ranking-card value-card-geo">
+          <div class="value-geo value-geo-arc"></div>
+          <span class="ranking-num">03</span>
+          <span class="ranking-badge badge-membership">Membership</span>
+          <img class="alfa-logo-img" src="images/alfa-international-logo.png" alt="ALFA International" width="1002" height="442"/>
+          <h3>ALFA International</h3>
+          <p>Exclusive Israeli member of ALFA International — a prestigious global network of 145 independent law firms across 60+ countries, providing seamless cross-border legal services worldwide.</p>
+          <a href="https://www.alfainternational.com" class="arrow-link" target="_blank">Visit ALFA International</a>
+        </div>
+        <div class="ranking-card value-card-geo">
+          <div class="value-geo value-geo-halfcircle"></div>
+          <span class="ranking-num">04</span>
+          <span class="ranking-badge badge-department">Specialist Team</span>
+          <h3>Elite Immigration Practice</h3>
+          <p>Our Immigration Law department has been the top-ranked immigration practice in Israel for over 25 years, with a dedicated team of 8 specialists serving multinational corporations and individuals.</p>
+          <a href="practices/immigration-law.html" class="arrow-link">Explore Immigration Law &rarr;</a>
+        </div>
+      </div>
+      <div class="geo-shape geo-arc geo-rankings-2-4"></div>
+      <div class="geo-shape geo-partial-rect geo-rankings-2-5"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>PRACTICE AREAS</h4>
+        <ul>
+          <li><a href="practices/immigration-law.html">Immigration Law</a></li>
+          <li><a href="practices/civil-commercial.html">Civil &amp; Commercial Law</a></li>
+          <li><a href="practices/real-estate.html">Real Estate Law</a></li>
+          <li><a href="practices/corporate-ma.html">M&amp;A and Commercial Investments</a></li>
+          <li><a href="practices/employment.html">Labor Law</a></li>
+          <li><a href="practices/litigation-arbitration.html">Litigation &amp; Dispute Resolution</a></li>
+          <li><a href="practices/energy-infrastructure.html">Energy and Infrastructure</a></li>
+          <li><a href="practices/personal-law.html">Personal Law</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>FIRM PROFILE</h4>
+        <ul>
+          <li><a href="about.html">Firm Profile</a></li>
+          <li><a href="expertise.html">Practice Areas</a></li>
+          <li><a href="people.html">Lawyers</a></li>
+          <li><a href="rankings.html">RANKINGS</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Offices</h4>
+        <ul>
+          <li><a href="contact.html">Ramat Gan — +972-54-686-5527</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>CONTACT</h4>
+        <ul>
+          <li><a href="contact.html">Get in Touch</a></li>
+          <li><a href="mailto:dardik@dglaw.co.il">dardik@dglaw.co.il</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Dardik Gross. All rights reserved.</span>
+      <span>Privacy Policy &nbsp;|&nbsp; Legal Notice &nbsp;|&nbsp; <a href="accessibility.html">Accessibility Statement</a></span>
+    </div>
+  </footer>
+
+  <script>
+    (function(){var last=window.scrollY;window.addEventListener('scroll',function(){var cur=window.scrollY;if(cur>last&&cur>80){document.getElementById('siteHeader').classList.add('header-hidden')}else{document.getElementById('siteHeader').classList.remove('header-hidden')}last=cur})})();
+    document.getElementById('menuBtn').addEventListener('click', () => document.getElementById('navOverlay').classList.add('open'));
+    document.getElementById('navClose').addEventListener('click', () => document.getElementById('navOverlay').classList.remove('open'));
+
+    // Interactive geometric shapes
+    (function(){
+      const shapes = document.querySelectorAll('.geo-shape');
+      const speed = [0.03, 0.05, 0.02, 0.04, 0.06, 0.035];
+      let ticking = false;
+      window.addEventListener('scroll', function(){
+        if(!ticking){
+          requestAnimationFrame(function(){
+            const scrollY = window.scrollY;
+            shapes.forEach(function(s, i){
+              const rate = speed[i % speed.length];
+              const yOff = scrollY * rate;
+              const rot = scrollY * rate * 0.3;
+              s.style.transform = 'translateY(' + yOff + 'px) rotate(' + rot + 'deg)';
+            });
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+      document.addEventListener('mousemove', function(e){
+        shapes.forEach(function(s){
+          const rect = s.getBoundingClientRect();
+          const cx = rect.left + rect.width / 2;
+          const cy = rect.top + rect.height / 2;
+          const dx = (e.clientX - cx) * 0.015;
+          const dy = (e.clientY - cy) * 0.015;
+          s.style.setProperty('--mouse-x', dx + 'px');
+          s.style.setProperty('--mouse-y', dy + 'px');
+        });
+      });
+    })();
+  </script>
+<script src="accessibility.js"></script>
+</body>
+</html>

@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>פרופיל המשרד | דרדיק גרוס | מובילים בדיני עסקים בישראל</title>
+  <meta name="description" content="דרדיק, גרוס ושות׳ הוא משרד עורכי דין בוטיק מוביל הממוקם במחוז תל אביב, המתמחה במשפט מסחרי ואזרחי עבור לקוחות ישראליים ובינלאומיים."/>
+  <link rel="stylesheet" href="../style.rtl.css"/>
+  <style>
+    /* Firm Profile page-specific styles */
+    .about-hero {
+      position: relative;
+      height: 75vh; min-height: 520px;
+      display: flex; align-items: flex-end;
+      overflow: hidden;
+    }
+    .about-hero-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center 18%;
+      filter: none;
+    }
+    .about-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.6) 30%, rgba(0,0,0,0) 58%);
+    }
+    .about-hero-content {
+      position: relative; z-index: 2;
+      padding: 0 60px 44px;
+      color: #fff;
+      max-width: 780px;
+    }
+    .about-hero-content .eyebrow {
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      opacity: 0.7; margin-bottom: 16px;
+      display: block;
+    }
+    .about-hero-content h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(32px, 4.5vw, 54px);
+      font-weight: 500; line-height: 1.15;
+      margin-bottom: 20px;
+    }
+    .about-hero-content p {
+      font-size: 17px; line-height: 1.7;
+      color: rgba(255,255,255,0.85);
+      max-width: 560px;
+    }
+
+    /* Story section */
+    .about-story {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .about-story-text h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: 500; line-height: 1.2;
+      margin-bottom: 28px;
+    }
+    .about-story-text p {
+      font-size: 17px; line-height: 1.85;
+      color: var(--dark-grey);
+      margin-bottom: 20px;
+    }
+    .about-story-img {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    .about-story-img video {
+      width: 100%; height: 520px;
+      object-fit: cover;
+      filter: grayscale(20%) brightness(0.9);
+      transition: filter 0.5s, transform 0.8s;
+    }
+    .about-story-img:hover video {
+      filter: grayscale(0%) brightness(1);
+      transform: scale(1.03);
+    }
+
+    .about-story-img img {
+      display: block; width: 100%; height: auto; max-height: 620px;
+      object-fit: cover; object-position: center top;
+      transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .about-story-img:hover img { transform: scale(1.03); }
+    @media (max-width: 1024px) { .about-story-img img { max-height: 460px; } }
+
+    /* Quote banner */
+    .about-quote {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .about-quote blockquote {
+      font-family: var(--font-serif);
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 500;
+      line-height: 1.4;
+      color: #fff;
+      position: relative;
+      padding: 0 20px;
+    }
+    .about-quote blockquote::before {
+      content: '\201C';
+      font-size: 80px;
+      position: absolute;
+      top: -30px; right: -10px;
+      color: rgba(255,255,255,0.15);
+      font-family: var(--font-serif);
+    }
+    .about-quote cite {
+      display: block;
+      margin-top: 28px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      font-style: normal;
+    }
+
+    /* Strengths pillars */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      margin-top: 60px;
+    }
+    .pillar-card {
+      background: var(--white);
+      padding: 52px 40px;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+    .pillar-card:hover { background: var(--off-white); }
+    .pillar-num {
+      font-family: var(--font-serif);
+      font-size: 48px; font-weight: 600;
+      color: rgba(26,26,26,0.06);
+      margin-bottom: 20px;
+      line-height: 1;
+    }
+    .pillar-card h3 {
+      font-family: var(--font-serif);
+      font-size: 22px; font-weight: 500;
+      margin-bottom: 16px; line-height: 1.3;
+    }
+    .pillar-card p {
+      font-size: 15px; color: var(--mid-grey);
+      line-height: 1.75;
+    }
+
+    /* Two-image row */
+    .about-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 60px;
+    }
+    .about-images .img-wrap {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      aspect-ratio: 16 / 10;
+    }
+    .about-images .img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      filter: grayscale(20%) brightness(0.9);
+      transition: filter 0.6s, transform 0.8s;
+    }
+    .about-images .img-wrap:hover img {
+      filter: grayscale(0%) brightness(1);
+      transform: scale(1.04);
+    }
+
+    /* three team photos: equal height, whole groups visible */
+    .about-images { display: flex !important; gap: 20px; align-items: stretch; }
+    .about-images .img-wrap { flex-basis: 0; min-width: 0; aspect-ratio: auto; }
+    .about-images .img-wrap img { display: block; height: 100%; object-position: center top; }
+    @media (max-width: 1024px) { .about-images { flex-direction: column; } .about-images .img-wrap { flex: none !important; width: 100%; } }
+
+    /* Recognition bar */
+    .recognition-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,0.08);
+      margin-top: 60px;
+    }
+    .recognition-item {
+      text-align: center;
+      padding: 40px 24px;
+    }
+    .recognition-item h3 {
+      font-family: var(--font-serif);
+      font-size: 36px; font-weight: 600;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .recognition-item p {
+      font-size: 12px; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .about-story { grid-template-columns: 1fr; gap: 48px; }
+      .about-story-img video { height: 380px; }
+      .pillars-grid { grid-template-columns: 1fr; }
+      .about-images { grid-template-columns: 1fr; }
+      .recognition-bar { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .about-hero { height: 60vh; min-height: 400px; }
+      .about-hero-content { padding: 0 24px 40px; }
+      .pillar-card { padding: 36px 24px; }
+      .recognition-bar { grid-template-columns: 1fr; }
+    }
+  
+
+    /* Team photo hero: show the full photo, text in a band beneath it */
+    .about-hero { height: auto !important; min-height: 0 !important; display: block; background: #1a1a1a; padding-left: 0 !important; padding-right: 0 !important; padding-bottom: 0 !important; }
+    .about-hero-img { position: relative; inset: auto; display: block; margin: 0 auto; width: auto; height: calc(100vh - 240px); max-width: calc(100% - 48px); aspect-ratio: 2.17 / 1; object-fit: cover; object-position: center top; filter: none; }
+    .about-hero-overlay { display: none; }
+    .about-hero-content { padding: 24px 0 32px !important; width: calc(100% - 48px); max-width: calc((100vh - 240px) * 2.17); margin: 0 auto; }
+    .about-hero-content h1 { font-size: clamp(28px, 2.6vw, 40px) !important; margin-bottom: 26px !important; }
+    @media (max-width: 768px) {
+      .about-hero-img { width: 100%; max-width: 100%; height: auto; }
+      .about-hero-content { padding: 22px 0 30px !important; }
+    }
+  </style>
+  <link rel="stylesheet" href="../he.css">
+  <link rel="stylesheet" href="../accessibility.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header hero-dark-ui" id="siteHeader">
+    <a href="index.html" class="header-logo"><img src="../logo-full-black.png" alt="דרדיק גרוס ושות׳" class="header-logo-img"><span class="header-logo-caption" aria-hidden="true"><span>דרדיק גרוס</span><span>משרד עורכי דין</span></span></a>
+    <nav class="main-nav">
+      <a href="index.html">בית</a>
+      <a href="about.html" class="active">פרופיל המשרד</a>
+      <div class="nav-dd-wrap">
+        <a href="expertise.html" aria-haspopup="true">תחומי עיסוק<span class="nav-caret" aria-hidden="true"></span></a>
+        <div class="nav-dd">
+          <a href="practices/immigration-law.html">דיני הגירה</a>
+          <a href="practices/civil-commercial.html">משפט אזרחי ומסחרי</a>
+          <a href="practices/real-estate.html">נדל״ן</a>
+          <a href="practices/corporate-ma.html">מיזוגים, רכישות והשקעות</a>
+          <a href="practices/employment.html">דיני עבודה</a>
+          <a href="practices/litigation-arbitration.html">ליטיגציה ויישוב סכסוכים</a>
+          <a href="practices/energy-infrastructure.html">אנרגיה ותשתיות</a>
+          <a href="practices/personal-law.html">דיני אישות וירושה</a>
+          <a class="nav-dd-all" href="expertise.html">לכל תחומי העיסוק ←</a>
+        </div>
+      </div>
+      <a href="people.html">עורכי דין</a>
+      <a href="rankings.html">דירוגים</a>
+      <a href="news.html">חדשות</a>
+      <a href="contact.html">צור קשר</a>
+    </nav>
+    <div class="header-right">
+      <div class="lang-switcher">
+        <a href="../about.html" hreflang="en" lang="en">E</a>
+        <span class="lang-divider">|</span>
+        <a href="about.html" class="active" hreflang="he" lang="he">ע</a>
+      </div>
+      <button class="menu-btn" id="menuBtn">תפריט</button>
+    </div>
+  </header>
+
+  <!-- NAV OVERLAY -->
+  <div class="nav-overlay" id="navOverlay">
+    <button class="nav-close" id="navClose">&#x2715;</button>
+    <div class="nav-main">
+      <div class="nav-col">
+        <h3>תחומי עיסוק</h3>
+        <ul>
+          <li><a href="practices/immigration-law.html">דיני הגירה</a></li>
+          <li><a href="practices/civil-commercial.html">משפט אזרחי ומסחרי</a></li>
+          <li><a href="practices/real-estate.html">מקרקעין</a></li>
+          <li><a href="practices/corporate-ma.html">מיזוגים, רכישות והשקעות מסחריות</a></li>
+          <li><a href="practices/employment.html">דיני עבודה</a></li>
+          <li><a href="practices/litigation-arbitration.html">ליטיגציה ויישוב סכסוכים</a></li>
+          <li><a href="practices/energy-infrastructure.html">אנרגיה ותשתיות</a></li>
+          <li><a href="practices/personal-law.html">דיני אישות וירושה</a></li>
+        </ul>
+      </div>
+      <div class="nav-col">
+        <h3>קישורים מהירים</h3>
+        <ul>
+          <li><a href="expertise.html">לתחומי העיסוק</a></li>
+          <li><a href="news.html">חדשות ותובנות</a></li>
+          <li><a href="rankings.html">דירוגים</a></li>
+          <li><a href="people.html">עורכי דין</a></li>
+          <li><a href="about.html">פרופיל המשרד</a></li>
+          <li><a href="contact.html">צור קשר</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO (full-screen video, like Home) -->
+  <section class="hero hero-clean profile-hero">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="../images/lawyers-walking-poster.jpg">
+      <source src="../lawyers-walking.mp4" type="video/mp4"/>
+    </video>
+    <div class="profile-hero-title">
+      <h1>דרדיק גרוס<span>מורכבות – בפשטות</span></h1>
+    </div>
+    <a href="#after-hero" class="hero-scroll" aria-label="גללו לחלק הבא">
+      <span class="hero-scroll-text">גללו</span>
+      <span class="hero-scroll-bar"><span class="hero-scroll-bar-inner"></span></span>
+    </a>
+  </section>
+  <span id="after-hero"></span>
+
+  <!-- STORY -->
+  <section class="section-light" style="position:relative;overflow:hidden">
+    <div class="geo-shape geo-half-circle geo-intro-1"></div>
+    <div class="geo-shape geo-partial-rect geo-intro-2"></div>
+    <div class="geo-shape geo-arc geo-intro-3"></div>
+    <div class="geo-shape geo-half-square geo-intro-4"></div>
+    <div class="geo-shape geo-partial-rect geo-intro-5"></div>
+    <div class="geo-shape geo-half-circle geo-intro-6"></div>
+    <div class="section-inner">
+      <div class="about-story">
+        <div class="about-story-text">
+          <p class="section-label">אודות</p>
+          <p class="about-lead">דרדיק, גרוס ושות׳ הוא משרד עורכי דין בוטיק המעניק ללקוחותיו שירותים משפטיים מקיפים ומלאים. המשרד ממוקם בלב האזור העסקי של ישראל ומתמחה במשפט המסחרי והאזרחי. המשרד נהנה ממוניטין מצוין בזכות ניסיונו העשיר בטיפול בעניינים משפטיים ועסקיים, מקומיים ובינלאומיים.</p>
+          <p>דרדיק, גרוס ושות׳ מדורג על ידי מדריכים יוקרתיים רבים (בארץ ובעולם) כאחד המשרדים המובילים בישראל במשפט מסחרי בינלאומי, בדיני הגירה (לרבות טיפול באשרות עבודה לישראל ובאשרות לחו״ל), במיזוגים ורכישות ובדיני זכיינות. בין היתר, המשרד מדורג בעקביות כמשרד מוביל במשפט מסחרי בינלאומי במדריכי Dun &amp; Bradstreet ו־BDI בשנים 2011–2023, ובשנים 2018–2023 דורג על ידי BDI כמשרד ״עילית״ בתחום זה.</p>
+          <p>המשרד מתאפיין בפעילות בינלאומית ענפה, המבוססת על שליטה מלאה בשפות זרות ועל כמעט שני עשורים של ניסיון בליווי תאגידים רב־לאומיים. אנו מעניקים ללקוחותינו שירות משפטי מקיף ושוטף בסגנון One-Stop-Shop, כך שכל לקוח מקבל שירות משפטי ברמה הגבוהה ביותר, המותאם במדויק לצרכיו.</p>
+          <p>המשרד מלווה חברות ויחידים, ישראלים וזרים, ומעניק להם את השירותים המשפטיים המתקדמים שהם זקוקים להם &ndash; בכל היבט של פעילותם העסקית. כל לקוח מקבל חבילת שירות המותאמת לצרכיו הייחודיים. המשרד מלווה לקוחות ישראלים בפעילותם העסקית בחו״ל, הודות להבנה עסקית מעמיקה ולשליטה בשפות האנגלית והספרדית. פעילות זו העניקה למשרד ידע וניסיון רב בעסקאות בינלאומיות.</p>
+          <p>המשרד הוא הנציג הישראלי הבלעדי של ALFA International, רשת משפטית הכוללת 150 משרדי עורכי דין עצמאיים ברחבי העולם.</p>
+          <div style="margin-top:16px">
+            <a href="expertise.html" class="btn btn-dark btn-geo">
+              <span class="btn-geo-shape btn-geo-halfcircle"></span>
+              <span class="btn-geo-shape btn-geo-square"></span>
+              לתחומי העיסוק שלנו
+            </a>
+          </div>
+        </div>
+        <div class="about-story-img">
+          <img src="../images/founding-partners.jpg" srcset="../images/founding-partners-700.jpg 700w, ../images/founding-partners.jpg 1200w" sizes="(max-width: 1024px) 100vw, 50vw" alt="השותפים המייסדים של דרדיק גרוס ושות׳" loading="lazy" width="1200" height="1290"/>
+        </div>
+      </div>
+  <div class="af-facts">
+        <div class="af-fact"><span class="af-fact-big">2011–2023</span><span class="af-fact-text">משרד מוביל במשפט מסחרי בינלאומי</span><span class="af-fact-src">Dun &amp; Bradstreet ו־BDI</span></div>
+        <div class="af-fact"><span class="af-fact-big">2018–2023</span><span class="af-fact-text">דורג כמשרד ״עילית״</span><span class="af-fact-src">BDI</span></div>
+        <div class="af-fact"><span class="af-fact-big">150 משרדים</span><span class="af-fact-text">הנציג הישראלי הבלעדי</span><span class="af-fact-src">ALFA International</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEMBERSHIPS (from Rankings, dark) -->
+  <section class="section-dark about-memberships" style="position:relative;overflow:hidden">
+    <div class="geo-shape geo-half-circle geo-expertise-1"></div>
+    <div class="geo-shape geo-arc geo-expertise-2"></div>
+    <div class="geo-shape geo-quarter-rect geo-expertise-3"></div>
+    <div class="geo-shape geo-half-square geo-expertise-4"></div>
+    <div class="geo-shape geo-half-circle geo-dark-v4"></div>
+    <div class="geo-shape geo-arc geo-dark-v6"></div>
+    <div class="section-inner" style="text-align:center">
+      <p class="section-label">דירוגים</p>
+      <h2 class="section-title" style="max-width:none;margin-bottom:48px">השתייכויות מקצועיות</h2>
+
+      <div class="membership-row">
+        <div class="membership-item">
+          <img class="alfa-logo-img" src="../images/alfa-international-logo.png" alt="ALFA International" width="1002" height="442"/>
+          <h4>ALFA International</h4>
+          <p>רשת גלובלית של למעלה מ־145 משרדי עורכי דין עצמאיים</p>
+        </div>
+        <div class="membership-item">
+          <img class="duns-member-logo" src="../images/duns100-logo.jpg" alt="Dun's 100" width="240" height="240"/>
+          <h4>דן אנד ברדסטריט</h4>
+          <p>מדורג ב־Dun's 100, 14 שנים ברציפות</p>
+        </div>
+        <div class="membership-item">
+          <img class="bdi-logo-img membership-bdi-logo" src="../images/bdi-code-logo.jpg" alt="BDI Code" width="963" height="1200"/>
+          <h4>BDI-Coface</h4>
+          <p>תואר ״מוביל מצטיין״</p>
+        </div>
+      </div>
+      <div class="memberships-cta"><a href="rankings.html" class="memberships-cta-btn">לכל הדירוגים <span aria-hidden="true">&larr;</span></a></div>
+    </div>
+  </section>
+
+  <!-- STRENGTHS -->
+  <section class="about-feature about-feature--light">
+    <div class="section-inner">
+      <div class="af-grid">
+        <figure class="af-photo af-photo--wide" data-mark="DG"><img src="../images/profile/intl.jpg" alt="פעילות בינלאומית" loading="lazy" onerror="this.remove()"/></figure>
+        <div class="af-body">
+          <h2 class="section-title">פעילות בינלאומית</h2>
+          <ol class="af-list">
+            <li><span class="af-num">01</span><div><h3>המומחיות שלנו</h3><p>המשרד מתאפיין בפעילות בינלאומית רחבה, המבוססת על שליטה מלאה של הצוות המשפטי בשפות זרות ועל כמעט שני עשורים של ניסיון במתן שירותים משפטיים לתאגידים מקומיים ורב־לאומיים.</p></div></li>
+            <li><span class="af-num">02</span><div><h3>שירות מקיף</h3><p>אנו מעניקים ללקוחותינו שירות מקיף ושוטף בסגנון One-Stop-Shop, כך שכל לקוח מקבל שירותים משפטיים מותאמים אישית, ברמה הגבוהה ביותר.</p></div></li>
+            <li><span class="af-num">03</span><div><h3>ניסיון בינלאומי</h3><p>המשרד מלווה לקוחות ישראלים בפעילותם המגוונת בחו״ל, הודות להבנה עסקית חדה ולשליטה מצוינת באנגלית ובספרדית &ndash; ובזכות כך צבר ניסיון משמעותי בעסקאות בינלאומיות.</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGES ROW -->
+  <section class="section-light" style="position:relative;overflow:hidden">
+    <div class="geo-shape geo-arc geo-intro-3"></div>
+    <div class="geo-shape geo-half-square geo-intro-4"></div>
+    <div class="geo-shape geo-partial-rect geo-intro-7"></div>
+    <div class="geo-shape geo-arc geo-intro-8"></div>
+    <div class="section-inner">
+      <div class="about-images">
+        <div class="img-wrap" style="flex-grow:1.236;aspect-ratio:1400/1133">
+          <img src="../images/firm-profile-1.jpg" srcset="../images/firm-profile-1-800.jpg 800w, ../images/firm-profile-1.jpg 1400w" sizes="(max-width: 1024px) 100vw, 33vw" alt="צוות דרדיק גרוס" loading="lazy" width="1400" height="1133"/>
+        </div>
+        <div class="img-wrap" style="flex-grow:1.033;aspect-ratio:1400/1355">
+          <img src="../images/firm-profile-2.jpg" srcset="../images/firm-profile-2-800.jpg 800w, ../images/firm-profile-2.jpg 1400w" sizes="(max-width: 1024px) 100vw, 33vw" alt="עורכי הדין של דרדיק גרוס" loading="lazy" width="1400" height="1355"/>
+        </div>
+        <div class="img-wrap" style="flex-grow:0.761;aspect-ratio:1400/1839">
+          <img src="../images/firm-profile-3.jpg" srcset="../images/firm-profile-3-800.jpg 800w, ../images/firm-profile-3.jpg 1400w" sizes="(max-width: 1024px) 100vw, 33vw" alt="עורכי הדין של דרדיק גרוס" loading="lazy" width="1400" height="1839"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOING BUSINESS IN ISRAEL (was: By the Numbers) -->
+  <section class="about-feature about-feature--dark about-feature--flip">
+    <div class="section-inner">
+      <div class="af-grid">
+        <figure class="af-photo af-photo--wide" data-mark="DG"><img src="../images/profile/dbi.jpg" alt="לעשות עסקים בישראל" loading="lazy" onerror="this.remove()"/></figure>
+        <div class="af-body">
+          <h2 class="section-title">לעשות עסקים בישראל</h2>
+          <ol class="af-list">
+            <li><span class="af-num">01</span><div><h3>סביבה עסקית דינמית</h3><p>ישראל מציעה סביבה עסקית ייחודית, המשלבת חדשנות, מיקום אסטרטגי ומסגרת משפטית איתנה.</p></div></li>
+            <li><span class="af-num">02</span><div><h3>מומחיות משפטית</h3><p>המדריך המקיף שלנו מכסה הכול &ndash; מהקמת חברה ועד עמידה בדרישות רגולטוריות &ndash; ומסייע לעסקים בינלאומיים לפעול בהצלחה בשוק הישראלי.</p></div></li>
+            <li><span class="af-num">03</span><div><h3>ליווי מקיף</h3><p>אנו מעניקים ליווי שוטף לחברות זרות המקימות פעילות בישראל, ומבטיחים השתלבות חלקה במערכת העסקית המקומית.</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR CLIENTS (+ contact button) -->
+  <section class="about-clients">
+    <div class="section-inner">
+      <div class="ac-grid">
+        <div class="ac-text">
+          <h2 class="section-title">הלקוחות שלנו</h2>
+          <p>אנו מייעצים לתאגידים וליחידים, ישראלים וזרים כאחד, ומעניקים לכל אחד מהם שירותים משפטיים מתוחכמים בכל רובדי פעילותם. בין לקוחותינו חברות בינלאומיות מובילות וקבוצות עסקיות הפועלות בישראל ובחו״ל, בפרט בתחומי האנרגיה, התשתיות, פרויקטי נדל״ן מורכבים, ליטיגציה מסחרית ודיני עבודה. בנוסף, למשרד ניסיון רב בענייני הגירה ובעניינים חוצי גבולות, והוא מעניק ליווי משפטי מקיף המשלב תובנה רגולטורית, הבנה מסחרית ופרספקטיבה גלובלית.</p>
+          <a href="contact.html" class="btn btn-dark btn-geo">
+        <span class="btn-geo-shape btn-geo-halfcircle"></span>
+        <span class="btn-geo-shape btn-geo-square"></span>
+        צרו קשר
+      </a>
+        </div>
+        <ul class="ac-chips"><li>אנרגיה</li><li>תשתיות</li><li>נדל״ן מורכב</li><li>ליטיגציה מסחרית</li><li>דיני עבודה</li><li>הגירה ועניינים חוצי גבולות</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DE&I COMMITMENT -->
+  <section class="about-feature about-feature--light about-feature--flip2">
+    <div class="section-inner">
+      <div class="af-grid">
+        <figure class="af-photo af-photo--wide af-photo--32" data-mark="DG"><img src="../images/profile/dei.jpg" alt="האנשים שלנו" loading="lazy" onerror="this.remove()"/></figure>
+        <div class="af-body">
+          <h2 class="section-title">מחויבות לגיוון, שוויון והכלה</h2>
+          <ol class="af-list">
+            <li><span class="af-num">01</span><div><h3>סביבה מגוונת</h3><p>דרדיק גרוס הוא משרד עורכי דין שבו אנשים בני לאומים, מגדרים, נטיות מיניות ורקעים שונים עובדים יחד ומעניקים ללקוחותינו שירותים משפטיים באיכות גבוהה.</p></div></li>
+            <li><span class="af-num">02</span><div><h3>הכוח שבגיוון</h3><p>אנו מאמינים שכוחו של צוות טמון בגיוון האנשים שבו ובאחדותם בדרך למטרה משותפת &ndash; ושרק כך אנשינו יכולים להביא חדשנות, להיות יצירתיים ולהפיק את המיטב.</p></div></li>
+            <li><span class="af-num">03</span><div><h3>שוויון הזדמנויות</h3><p>דרדיק גרוס שואף ליצור סביבת עבודה שבה לכל אדם הזדמנות שווה לצמוח ולהצליח, ולהרגיש בטוח ומוערך.</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>תחומי עיסוק</h4>
+        <ul>
+          <li><a href="practices/immigration-law.html">דיני הגירה</a></li>
+          <li><a href="practices/civil-commercial.html">משפט אזרחי ומסחרי</a></li>
+          <li><a href="practices/real-estate.html">מקרקעין</a></li>
+          <li><a href="practices/corporate-ma.html">מיזוגים, רכישות והשקעות מסחריות</a></li>
+          <li><a href="practices/employment.html">דיני עבודה</a></li>
+          <li><a href="practices/litigation-arbitration.html">ליטיגציה ויישוב סכסוכים</a></li>
+          <li><a href="practices/energy-infrastructure.html">אנרגיה ותשתיות</a></li>
+          <li><a href="practices/personal-law.html">דיני אישות וירושה</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>פרופיל המשרד</h4>
+        <ul>
+          <li><a href="about.html">פרופיל המשרד</a></li>
+          <li><a href="expertise.html">תחומי עיסוק</a></li>
+          <li><a href="people.html">עורכי דין</a></li>
+          <li><a href="rankings.html">דירוגים</a></li>
+          <li><a href="news.html">חדשות</a></li>
+          <li><a href="contact.html">צור קשר</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>משרדים</h4>
+        <ul>
+          <li><a href="contact.html">רמת גן — ‎+972-54-686-5527</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>צור קשר</h4>
+        <ul>
+          <li><a href="contact.html">צרו קשר</a></li>
+          <li><a href="mailto:dardik@dglaw.co.il">dardik@dglaw.co.il</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 דרדיק גרוס. כל הזכויות שמורות.</span>
+      <span>מדיניות פרטיות | הבהרה משפטית | <a href="accessibility.html">הצהרת נגישות</a></span>
+    </div>
+  </footer>
+
+  <script>
+    (function(){var last=window.scrollY;window.addEventListener('scroll',function(){var cur=window.scrollY;if(cur>last&&cur>80){document.getElementById('siteHeader').classList.add('header-hidden')}else{document.getElementById('siteHeader').classList.remove('header-hidden')}last=cur})})();
+    document.getElementById('menuBtn').addEventListener('click', () => document.getElementById('navOverlay').classList.add('open'));
+    document.getElementById('navClose').addEventListener('click', () => document.getElementById('navOverlay').classList.remove('open'));
+
+    // Interactive geometric shapes
+    (function(){
+      const shapes = document.querySelectorAll('.geo-shape');
+      const speed = [0.03, 0.05, 0.02, 0.04, 0.06, 0.035];
+      let ticking = false;
+      window.addEventListener('scroll', function(){
+        if(!ticking){
+          requestAnimationFrame(function(){
+            const scrollY = window.scrollY;
+            shapes.forEach(function(s, i){
+              const rate = speed[i % speed.length];
+              const yOff = scrollY * rate;
+              const rot = scrollY * rate * 0.3;
+              s.style.transform = 'translateY(' + yOff + 'px) rotate(' + rot + 'deg)';
+            });
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+      document.addEventListener('mousemove', function(e){
+        shapes.forEach(function(s){
+          const rect = s.getBoundingClientRect();
+          const cx = rect.left + rect.width / 2;
+          const cy = rect.top + rect.height / 2;
+          const dx = (e.clientX - cx) * 0.015;
+          const dy = (e.clientY - cy) * 0.015;
+          s.style.setProperty('--mouse-x', dx + 'px');
+          s.style.setProperty('--mouse-y', dy + 'px');
+        });
+      });
+    })();
+  </script>
+<script src="../accessibility.js"></script>
+</body>
+</html>

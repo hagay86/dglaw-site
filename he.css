@@ -1,0 +1,48 @@
+/* ── Hebrew (RTL) overrides — loaded after style.rtl.css on /he/ pages ── */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@400;500;600;700&family=Noto+Sans+Hebrew:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-serif: 'Noto Serif Hebrew', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Noto Sans Hebrew', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Noto Serif Hebrew', 'Cormorant Garamond', Georgia, serif;
+}
+html[lang="he"] body { font-family: var(--font-sans); }
+
+/* Hard-coded Latin display fonts in the base CSS → Hebrew equivalents */
+html[lang="he"] h1, html[lang="he"] h2, html[lang="he"] h3, html[lang="he"] h4,
+html[lang="he"] .hero-firm, html[lang="he"] .hero-tagline,
+html[lang="he"] [class*="title"], html[lang="he"] [class*="heading"] {
+  font-family: var(--font-serif);
+}
+
+/* Hebrew has no capitals — tone down the wide tracking used for English caps */
+html[lang="he"] .main-nav a,
+html[lang="he"] .eyebrow,
+html[lang="he"] .menu-btn,
+html[lang="he"] [class*="label"],
+html[lang="he"] [class*="eyebrow"],
+html[lang="he"] [class*="kicker"] {
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+html[lang="he"] .main-nav a { font-size: 14px; font-weight: 500; }
+
+/* Keep numbers, phones and emails left-to-right inside Hebrew text */
+html[lang="he"] a[href^="tel:"], html[lang="he"] a[href^="mailto:"] {
+  direction: ltr; unicode-bidi: embed;
+}
+
+/* Wide letter-spacing and fake italics look wrong in Hebrew */
+html[lang="he"] body * { letter-spacing: normal !important; }
+html[lang="he"] em, html[lang="he"] i, html[lang="he"] cite,
+html[lang="he"] blockquote, html[lang="he"] q { font-style: normal; }
+/* No drop-cap in Hebrew */
+html[lang="he"] .news-featured-body p::first-letter {
+  float: none; font-size: inherit; line-height: inherit; margin: 0; padding: 0;
+  font-family: inherit; color: inherit;
+}
+
+/* Headings: Noto Serif Hebrew at a steady medium weight */
+html[lang="he"] h1, html[lang="he"] h2, html[lang="he"] h3 { font-weight: 500; }
+/* No slanted text anywhere in Hebrew (logos in SVG excluded) */
+html[lang="he"] body *:not(svg):not(svg *) { font-style: normal !important; }

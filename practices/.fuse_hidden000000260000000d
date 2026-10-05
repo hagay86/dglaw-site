@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>M&A and Commercial Investments | Dardik Gross</title>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+<header class="site-header" id="siteHeader">
+  <a href="../index.html" class="header-logo"><img src="../logo-white.svg" alt="Dardik Gross & Co." style="height:40px;width:auto"></a>
+  <div class="header-right">
+    <div class="lang-switcher"><a href="#" class="active">EN</a><a href="#">DE</a><a href="#">FR</a></div>
+    <button class="menu-btn" id="menuBtn">Menu</button>
+  </div>
+</header>
+<div class="nav-overlay" id="navOverlay">
+  <button class="nav-close" id="navClose">&#x2715;</button>
+  <div class="nav-main">
+    <div class="nav-col">
+      <h3>Practices</h3>
+      <ul>
+        <li><a href="corporate-ma.html">M&A and Commercial Investments</a></li>
+        <li><a href="real-estate.html">Real Estate</a></li>
+        <li><a href="employment.html">Labor Law</a></li>
+        <li><a href="litigation-arbitration.html">Litigation &amp; Dispute Resolution</a></li>
+      </ul>
+    </div>
+    <div class="nav-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="../expertise.html">Expertise</a></li>
+        <li><a href="../news.html">News &amp; Insights</a></li>
+        <li><a href="../rankings.html">Rankings</a></li>
+
+
+        <li><a href="../people.html">People</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<main>
+  <div class="page-hero">
+    <div class="page-hero-bg" style="background:#1a1a1a"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <p class="eyebrow">M&A AND COMMERCIAL INVESTMENTS</p>
+      <h1>M&A and Commercial Investments</h1>
+    </div>
+  </div>
+  <div class="practice-intro" style="position:relative;overflow:hidden">
+    <div class="geo-shape geo-half-circle geo-practice-ma-1-1"></div>
+    <div class="geo-shape geo-partial-rect geo-practice-ma-1-2"></div>
+    <div class="geo-shape geo-arc geo-practice-ma-1-3"></div>
+    <div class="geo-shape geo-half-circle geo-practice-ma-1-4"></div>
+    <div class="geo-shape geo-partial-rect geo-practice-ma-1-5"></div>
+    <div class="geo-shape geo-arc geo-practice-ma-1-6"></div>
+    <div class="practice-intro-text">
+      <h2>Strategic Legal Counsel for Complex Transactions</h2>
+      <p>Dardik, Gross & Co.'s M&A and Commercial Investments Department advises a wide range of clients regarding domestic and cross-border corporate transactions, including: mergers, acquisitions, asset sale transactions and leveraged buy-outs; private equity financing; convertible loans; venture lending and other debt financings. Our experience and knowledge allows us to provide our clients with legal advice in all stages of a transaction, from the initial negotiations through legal due diligence and regulatory filings, consents and approvals related to transactions, such as the approval of the Office of the Chief Scientist for the transfer of intellectual property outside of Israel. We assist our clients in negotiating and structuring the transaction and related commercial agreements, as well as providing continuous legal advice. The Department is active in negotiating share and asset purchases; statutory mergers; exchange and cash tender offers; spin-offs; recapitalizations, joint ventures and court approved arrangements among shareholders, conducting legal due diligence reviews, advising boards of directors on corporate governance issues, providing legal advice relating to management and employee participation and incentive programs, and drafting documents for financing transactions such as convertible loan agreements. In recent years we handled Stock Purchase Agreements for sale of $3 million of stock of an Israeli cloud-based data storage provider, Venture Capital Financing Rounds representing one of the leading VC Funds in Israel, investments transactions (Seed and Series A round) in the field of e-commerce, SCADA, and providing ongoing legal and investment support to a developer of an e-commerce widget.</p>
+      <div class="expertise-list" style="margin-top:32px">
+        <h3>Expertise</h3>
+        <ul>
+          <li>Mergers and acquisitions</li>
+          <li>Asset and share purchases</li>
+          <li>Private equity and venture capital financing</li>
+          <li>Leveraged buyouts and recapitalizations</li>
+          <li>Due diligence reviews</li>
+          <li>Corporate governance and shareholder arrangements</li>
+          <li>Convertible loans and debt financing</li>
+        </ul>
+      </div>
+      <div style="margin-top:32px"><a href="../contact.html" class="btn btn-dark">Get in touch</a></div>
+    </div>
+    <div>
+      <img src="https://drive.google.com/uc?id=1sXh5XsLmaIXNWHO5ryg4S1wqCTHylPjk&export=view" alt="Practice Head" style="width:100%;aspect-ratio:0.85;object-fit:cover;margin-bottom:20px"/>
+      <p style="font-size:13px;color:#6b6b6b;">Adv. Asaf Ezrati - Partner, Head of M&A and Commercial Investments Department</p>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col"><h4>Expertise</h4><ul><li><a href="../expertise.html">All Practice Areas</a></li><li><a href="corporate-ma.html">Corporate and M&amp;A</a></li><li><a href="banking-finance.html">Banking and Finance</a></li><li><a href="litigation-arbitration.html">Litigation and Arbitration</a></li><li><a href="tax.html">Tax</a></li></ul></div>
+    <div class="footer-col"><h4>Firm</h4><ul><li><a href="../about.html">About Us</a></li><li><a href="../people.html">People</a></li><li><a href="../news.html">News &amp; Insights</a></li></ul></div>
+    <div class="footer-col"><h4>Offices</h4><ul><li><a href="../contact.html">Ramat Gan — +972-54-686-5527</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="../contact.html">Get in Touch</a></li><li><a href="mailto:dardik@dglaw.co.il">dardik@dglaw.co.il</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><span>&copy; 2026 Dardik Gross. All rights reserved.</span><span>Privacy Policy &nbsp;|&nbsp; Legal Notice</span></div>
+</footer>
+<script>
+  (function(){var last=window.scrollY;window.addEventListener('scroll',function(){var cur=window.scrollY;if(cur>last&&cur>80){document.getElementById('siteHeader').classList.add('header-hidden')}else{document.getElementById('siteHeader').classList.remove('header-hidden')}last=cur})})();
+  document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('navOverlay').classList.add('open'));
+  document.getElementById('navClose').addEventListener('click',()=>document.getElementById('navOverlay').classList.remove('open'));
+</script>
+
+<script>
+(function(){
+  const shapes = document.querySelectorAll('.geo-shape');
+  const speed = [0.03, 0.05, 0.02, 0.04, 0.06, 0.035];
+  let ticking = false;
+  window.addEventListener('scroll', function(){
+    if(!ticking){
+      requestAnimationFrame(function(){
+        const scrollY = window.scrollY;
+        shapes.forEach(function(s, i){
+          const rate = speed[i % speed.length];
+          const yOff = scrollY * rate;
+          const rot = scrollY * rate * 0.3;
+          s.style.transform = 'translateY(' + yOff + 'px) rotate(' + rot + 'deg)';
+        });
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+  document.addEventListener('mousemove', function(e){
+    shapes.forEach(function(s){
+      const rect = s.getBoundingClientRect();
+      const cx = rect.left + rect.width / 2;
+      const cy = rect.top + rect.height / 2;
+      const dx = (e.clientX - cx) * 0.015;
+      const dy = (e.clientY - cy) * 0.015;
+      s.style.setProperty('--mouse-x', dx + 'px');
+      s.style.setProperty('--mouse-y', dy + 'px');
+    });
+  });
+})();
+</script>
+</body>
+</html>
