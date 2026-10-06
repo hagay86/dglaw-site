@@ -4217,3 +4217,21 @@ html[lang="he"] .pr-story-chip,html[lang="he"] .pr-story-more{letter-spacing:.02
 .page-hero-photo.tone-sky::before{opacity:.08!important}
 .page-hero-photo .page-hero-overlay{background:linear-gradient(to top,rgba(0,0,0,.6) 0%,rgba(0,0,0,.22) 30%,rgba(0,0,0,0) 58%)!important}
 .page-hero-photo .page-hero-content{text-shadow:0 2px 18px rgba(0,0,0,.55)}
+
+/* RANKINGS PAGE: clean list layout */
+.rk-section{padding:150px 60px 130px!important}
+.rk-inner{max-width:1000px;margin:0 auto}
+.rk-head{text-align:center;margin-bottom:72px}
+.rk-head .section-label{margin-bottom:18px}
+.rk-head .section-title{font-family:var(--font-serif);font-weight:400;color:#fff;max-width:none;margin:0 auto;font-size:clamp(34px,4vw,52px);line-height:1.15}
+.rk-list{list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.14)}
+.rk-row{display:grid;grid-template-columns:132px 1fr auto;align-items:center;gap:44px;padding:44px 8px;border-bottom:1px solid rgba(255,255,255,.14)}
+.rk-logo{display:flex;align-items:center;justify-content:center;width:132px;height:108px;background:#fff;border-radius:10px;padding:14px}
+.rk-logo img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;margin:0;mix-blend-mode:normal}
+.rk-body h3{font-family:var(--font-serif);font-weight:400;font-size:26px;line-height:1.25;color:#fff;margin:0 0 8px}
+.rk-body p{font-size:15.5px;line-height:1.65;color:rgba(255,255,255,.72);margin:0;max-width:52ch}
+.rk-link{display:inline-block;margin-top:14px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#C9A86A;text-decoration:none;border-bottom:1px solid rgba(201,168,106,.5);padding-bottom:2px}
+.rk-link:hover{opacity:1;border-bottom-color:#C9A86A}
+.rk-meta{font-family:var(--font-serif);font-size:24px;color:#C9A86A;white-space:nowrap;text-align:end;min-width:130px}
+html[lang="he"] .rk-link{letter-spacing:.02em;font-size:13.5px}
+@media (max-width:820px){.rk-section{padding:110px 24px 80px!important}.rk-head{margin-bottom:44px}.rk-row{grid-template-columns:84px 1fr;gap:20px;padding:30px 0;align-items:start}.rk-logo{width:84px;height:72px;padding:9px}.rk-body h3{font-size:21px}.rk-meta{grid-column:2;text-align:start;font-size:18px;min-width:0;margin-top:-6px}}
