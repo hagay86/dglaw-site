@@ -4182,3 +4182,6 @@ html[lang="he"] .person-more{letter-spacing:.02em;font-size:13px}
 .person-card.has-profile:hover .person-more{border-bottom-color:#9a7b3f}
 .head-link{display:block}
 
+
+/* HOVER FADE FIX: lawyer cards must not fade on hover, only the person turns b&w */
+.person-link:hover,.dept-card:hover,.head-link:hover,.lp-photo a:hover{opacity:1!important}
