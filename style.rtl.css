@@ -4213,3 +4213,9 @@ html[lang="he"] .pr-story-chip,html[lang="he"] .pr-story-more{letter-spacing:.02
 .af-caption{margin:12px 2px 0;font-size:13.5px;line-height:1.5;color:#6b6b6b;font-style:italic}
 .about-feature--dark .af-caption{color:rgba(255,255,255,.7)}
 @media (max-width:1024px){.about-feature--flip .af-photo-wrap{order:0}}
+
+/* BRIGHTER PRACTICE BANNERS: lighter colour wash and lighter dark gradient */
+.page-hero-photo::before{opacity:.12!important}
+.page-hero-photo.tone-sky::before{opacity:.08!important}
+.page-hero-photo .page-hero-overlay{background:linear-gradient(to top,rgba(0,0,0,.6) 0%,rgba(0,0,0,.22) 30%,rgba(0,0,0,0) 58%)!important}
+.page-hero-photo .page-hero-content{text-shadow:0 2px 18px rgba(0,0,0,.55)}
