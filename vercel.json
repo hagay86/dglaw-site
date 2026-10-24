@@ -1,8 +1,7 @@
 {
- "cleanUrls": false,
  "redirects": [
   {
-   "source": "/firm-profile/:p(.*almog.*)",
+   "source": "/:r(firm-profile/.*almog.*)",
    "has": [
     {
      "type": "query",
@@ -14,12 +13,12 @@
    "permanent": true
   },
   {
-   "source": "/firm-profile/:p(.*almog.*)",
+   "source": "/:r(firm-profile/.*almog.*)",
    "destination": "/lawyers/lior-almog.html",
    "permanent": true
   },
   {
-   "source": "/firm-profile/:p(.*egoz.*)",
+   "source": "/:r(firm-profile/.*egoz.*)",
    "has": [
     {
      "type": "query",
@@ -31,12 +30,12 @@
    "permanent": true
   },
   {
-   "source": "/firm-profile/:p(.*egoz.*)",
+   "source": "/:r(firm-profile/.*egoz.*)",
    "destination": "/lawyers/dafna-egoz.html",
    "permanent": true
   },
   {
-   "source": "/firm-profile/:p(.*amnon.*)",
+   "source": "/:r(firm-profile/.*amnon.*)",
    "has": [
     {
      "type": "query",
@@ -48,12 +47,12 @@
    "permanent": true
   },
   {
-   "source": "/firm-profile/:p(.*amnon.*)",
+   "source": "/:r(firm-profile/.*amnon.*)",
    "destination": "/lawyers/amnon-dardik.html",
    "permanent": true
   },
   {
-   "source": "/firm-profile/:p(.*dardik.*)",
+   "source": "/:r(firm-profile/.*dardik.*)",
    "has": [
     {
      "type": "query",
@@ -65,12 +64,12 @@
    "permanent": true
   },
   {
-   "source": "/firm-profile/:p(.*dardik.*)",
+   "source": "/:r(firm-profile/.*dardik.*)",
    "destination": "/lawyers/amnon-dardik.html",
    "permanent": true
   },
   {
-   "source": "/firm-profile/:p(.*dan-gross.*)",
+   "source": "/:r(firm-profile/.*dan-gross.*)",
    "has": [
     {
      "type": "query",
@@ -82,29 +81,12 @@
    "permanent": true
   },
   {
-   "source": "/firm-profile/:p(.*dan-gross.*)",
+   "source": "/:r(firm-profile/.*dan-gross.*)",
    "destination": "/lawyers/dan-gross.html",
    "permanent": true
   },
   {
-   "source": "/firm-profile/:p(.*gross-adv.*)",
-   "has": [
-    {
-     "type": "query",
-     "key": "lang",
-     "value": "he"
-    }
-   ],
-   "destination": "/he/lawyers/dan-gross.html",
-   "permanent": true
-  },
-  {
-   "source": "/firm-profile/:p(.*gross-adv.*)",
-   "destination": "/lawyers/dan-gross.html",
-   "permanent": true
-  },
-  {
-   "source": "/firm-profile/:p(.*ezrati.*)",
+   "source": "/:r(firm-profile/.*ezrati.*)",
    "has": [
     {
      "type": "query",
@@ -116,12 +98,12 @@
    "permanent": true
   },
   {
-   "source": "/firm-profile/:p(.*ezrati.*)",
+   "source": "/:r(firm-profile/.*ezrati.*)",
    "destination": "/lawyers/asaf-ezrati.html",
    "permanent": true
   },
   {
-   "source": "/firm-profile/:p(.*galili.*)",
+   "source": "/:r(firm-profile/.*galili.*)",
    "has": [
     {
      "type": "query",
@@ -133,12 +115,12 @@
    "permanent": true
   },
   {
-   "source": "/firm-profile/:p(.*galili.*)",
+   "source": "/:r(firm-profile/.*galili.*)",
    "destination": "/lawyers/anat-galili.html",
    "permanent": true
   },
   {
-   "source": "/firm-profile/:p(.*neeman.*)",
+   "source": "/:r(firm-profile/.*neeman.*)",
    "has": [
     {
      "type": "query",
@@ -150,12 +132,12 @@
    "permanent": true
   },
   {
-   "source": "/firm-profile/:p(.*neeman.*)",
+   "source": "/:r(firm-profile/.*neeman.*)",
    "destination": "/lawyers/kobi-neeman.html",
    "permanent": true
   },
   {
-   "source": "/firm-profile/:p(.*feinstein.*)",
+   "source": "/:r(firm-profile/.*feinstein.*)",
    "has": [
     {
      "type": "query",
@@ -167,12 +149,12 @@
    "permanent": true
   },
   {
-   "source": "/firm-profile/:p(.*feinstein.*)",
+   "source": "/:r(firm-profile/.*feinstein.*)",
    "destination": "/lawyers/maly-feinstein.html",
    "permanent": true
   },
   {
-   "source": "/firm-profile",
+   "source": "/:r(firm-profile/?)",
    "has": [
     {
      "type": "query",
@@ -184,12 +166,12 @@
    "permanent": true
   },
   {
-   "source": "/firm-profile",
+   "source": "/:r(firm-profile/?)",
    "destination": "/about.html",
    "permanent": true
   },
   {
-   "source": "/firm-profile/:p*",
+   "source": "/:r(firm-profile/.+)",
    "has": [
     {
      "type": "query",
@@ -201,12 +183,12 @@
    "permanent": true
   },
   {
-   "source": "/firm-profile/:p*",
+   "source": "/:r(firm-profile/.+)",
    "destination": "/people.html",
    "permanent": true
   },
   {
-   "source": "/immigration",
+   "source": "/:r(immigration(?:/.*)?)",
    "has": [
     {
      "type": "query",
@@ -218,12 +200,12 @@
    "permanent": true
   },
   {
-   "source": "/immigration",
+   "source": "/:r(immigration(?:/.*)?)",
    "destination": "/practices/immigration-law.html",
    "permanent": true
   },
   {
-   "source": "/immigration/:p*",
+   "source": "/:r(areas-of-expertise/immigration.*)",
    "has": [
     {
      "type": "query",
@@ -235,29 +217,12 @@
    "permanent": true
   },
   {
-   "source": "/immigration/:p*",
+   "source": "/:r(areas-of-expertise/immigration.*)",
    "destination": "/practices/immigration-law.html",
    "permanent": true
   },
   {
-   "source": "/areas-of-expertise/immigration",
-   "has": [
-    {
-     "type": "query",
-     "key": "lang",
-     "value": "he"
-    }
-   ],
-   "destination": "/he/practices/immigration-law.html",
-   "permanent": true
-  },
-  {
-   "source": "/areas-of-expertise/immigration",
-   "destination": "/practices/immigration-law.html",
-   "permanent": true
-  },
-  {
-   "source": "/areas-of-expertise/aviation-maritime",
+   "source": "/:r(areas-of-expertise/aviation-maritime.*)",
    "has": [
     {
      "type": "query",
@@ -269,12 +234,12 @@
    "permanent": true
   },
   {
-   "source": "/areas-of-expertise/aviation-maritime",
+   "source": "/:r(areas-of-expertise/aviation-maritime.*)",
    "destination": "/practices/personal-law.html",
    "permanent": true
   },
   {
-   "source": "/:a(areas-of-expertise|628-2)/international-commercial-law",
+   "source": "/:r((?:areas-of-expertise|628-2)/international-commercial-law.*)",
    "has": [
     {
      "type": "query",
@@ -286,12 +251,12 @@
    "permanent": true
   },
   {
-   "source": "/:a(areas-of-expertise|628-2)/international-commercial-law",
+   "source": "/:r((?:areas-of-expertise|628-2)/international-commercial-law.*)",
    "destination": "/practices/civil-commercial.html",
    "permanent": true
   },
   {
-   "source": "/:a(areas-of-expertise|628-2)",
+   "source": "/:r((?:areas-of-expertise|628-2)(?:/.*)?)",
    "has": [
     {
      "type": "query",
@@ -303,29 +268,12 @@
    "permanent": true
   },
   {
-   "source": "/:a(areas-of-expertise|628-2)",
+   "source": "/:r((?:areas-of-expertise|628-2)(?:/.*)?)",
    "destination": "/expertise.html",
    "permanent": true
   },
   {
-   "source": "/:a(areas-of-expertise|628-2)/:p*",
-   "has": [
-    {
-     "type": "query",
-     "key": "lang",
-     "value": "he"
-    }
-   ],
-   "destination": "/he/expertise.html",
-   "permanent": true
-  },
-  {
-   "source": "/:a(areas-of-expertise|628-2)/:p*",
-   "destination": "/expertise.html",
-   "permanent": true
-  },
-  {
-   "source": "/contact-us",
+   "source": "/:r(contact(?:-us)?/?)",
    "has": [
     {
      "type": "query",
@@ -337,29 +285,12 @@
    "permanent": true
   },
   {
-   "source": "/contact-us",
+   "source": "/:r(contact(?:-us)?/?)",
    "destination": "/contact.html",
    "permanent": true
   },
   {
-   "source": "/contact",
-   "has": [
-    {
-     "type": "query",
-     "key": "lang",
-     "value": "he"
-    }
-   ],
-   "destination": "/he/contact.html",
-   "permanent": true
-  },
-  {
-   "source": "/contact",
-   "destination": "/contact.html",
-   "permanent": true
-  },
-  {
-   "source": "/accessibility-statement",
+   "source": "/:r(accessibility-statement/?)",
    "has": [
     {
      "type": "query",
@@ -371,12 +302,12 @@
    "permanent": true
   },
   {
-   "source": "/accessibility-statement",
+   "source": "/:r(accessibility-statement/?)",
    "destination": "/accessibility.html",
    "permanent": true
   },
   {
-   "source": "/among-top-israeli-law-firms",
+   "source": "/:r((?:among-top-israeli-law-firms|dg-alfa-international)/?)",
    "has": [
     {
      "type": "query",
@@ -388,29 +319,12 @@
    "permanent": true
   },
   {
-   "source": "/among-top-israeli-law-firms",
+   "source": "/:r((?:among-top-israeli-law-firms|dg-alfa-international)/?)",
    "destination": "/rankings.html",
    "permanent": true
   },
   {
-   "source": "/dg-alfa-international",
-   "has": [
-    {
-     "type": "query",
-     "key": "lang",
-     "value": "he"
-    }
-   ],
-   "destination": "/he/rankings.html",
-   "permanent": true
-  },
-  {
-   "source": "/dg-alfa-international",
-   "destination": "/rankings.html",
-   "permanent": true
-  },
-  {
-   "source": "/doing-business-in-israel",
+   "source": "/:r((?:doing-business-in-israel|about-us|about)/?)",
    "has": [
     {
      "type": "query",
@@ -422,12 +336,12 @@
    "permanent": true
   },
   {
-   "source": "/doing-business-in-israel",
+   "source": "/:r((?:doing-business-in-israel|about-us|about)/?)",
    "destination": "/about.html",
    "permanent": true
   },
   {
-   "source": "/about-us",
+   "source": "/:r((?:director-obligations|establishing-a-bank-account|israel-work-permit)[^.]*)",
    "has": [
     {
      "type": "query",
@@ -435,105 +349,26 @@
      "value": "he"
     }
    ],
-   "destination": "/he/about.html",
+   "destination": "/he/news.html",
    "permanent": true
   },
   {
-   "source": "/about-us",
-   "destination": "/about.html",
+   "source": "/:r((?:director-obligations|establishing-a-bank-account|israel-work-permit)[^.]*)",
+   "destination": "/news.html",
    "permanent": true
   },
   {
-   "source": "/about",
-   "has": [
-    {
-     "type": "query",
-     "key": "lang",
-     "value": "he"
-    }
-   ],
-   "destination": "/he/about.html",
-   "permanent": true
-  },
-  {
-   "source": "/about",
-   "destination": "/about.html",
-   "permanent": true
-  },
-  {
-   "source": "/:p(%D7%A2%D7%9C%D7%99%D7%99%D7%94.*|עלייה.*)",
+   "source": "/:r(%D7%A2%D7%9C%D7%99%D7%99%D7%94.*|עלייה.*)",
    "destination": "/he/practices/immigration-law.html",
    "permanent": true
   },
   {
-   "source": "/:p(%D7%93%D7%A8%D7%93%D7%99%D7%A7.*|דרדיק.*)",
+   "source": "/:r(%D7%93%D7%A8%D7%93%D7%99%D7%A7.*|דרדיק.*)",
    "destination": "/he/rankings.html",
    "permanent": true
   },
   {
-   "source": "/director-obligations-under-israeli-law:x*",
-   "has": [
-    {
-     "type": "query",
-     "key": "lang",
-     "value": "he"
-    }
-   ],
-   "destination": "/he/news.html",
-   "permanent": true
-  },
-  {
-   "source": "/director-obligations-under-israeli-law:x*",
-   "destination": "/news.html",
-   "permanent": true
-  },
-  {
-   "source": "/establishing-a-bank-account:x*",
-   "has": [
-    {
-     "type": "query",
-     "key": "lang",
-     "value": "he"
-    }
-   ],
-   "destination": "/he/news.html",
-   "permanent": true
-  },
-  {
-   "source": "/establishing-a-bank-account:x*",
-   "destination": "/news.html",
-   "permanent": true
-  },
-  {
-   "source": "/israel-work-permit:x*",
-   "has": [
-    {
-     "type": "query",
-     "key": "lang",
-     "value": "he"
-    }
-   ],
-   "destination": "/he/news.html",
-   "permanent": true
-  },
-  {
-   "source": "/israel-work-permit:x*",
-   "destination": "/news.html",
-   "permanent": true
-  },
-  {
-   "source": "/",
-   "has": [
-    {
-     "type": "query",
-     "key": "p"
-    }
-   ],
-   "destination": "/",
-   "permanent": true
-  },
-  {
-   "source": "/:p((?!he/?$)[^.]+)",
+   "source": "/:r((?!he/?$)[^.]+)",
    "has": [
     {
      "type": "query",
@@ -545,7 +380,7 @@
    "permanent": true
   },
   {
-   "source": "/:p((?!he/?$)[^.]+)",
+   "source": "/:r((?!he/?$)[^.]+)",
    "destination": "/",
    "permanent": true
   }
