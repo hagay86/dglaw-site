@@ -1,0 +1,553 @@
+{
+ "cleanUrls": false,
+ "redirects": [
+  {
+   "source": "/firm-profile/:p(.*almog.*)",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/lawyers/lior-almog.html",
+   "permanent": true
+  },
+  {
+   "source": "/firm-profile/:p(.*almog.*)",
+   "destination": "/lawyers/lior-almog.html",
+   "permanent": true
+  },
+  {
+   "source": "/firm-profile/:p(.*egoz.*)",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/lawyers/dafna-egoz.html",
+   "permanent": true
+  },
+  {
+   "source": "/firm-profile/:p(.*egoz.*)",
+   "destination": "/lawyers/dafna-egoz.html",
+   "permanent": true
+  },
+  {
+   "source": "/firm-profile/:p(.*amnon.*)",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/lawyers/amnon-dardik.html",
+   "permanent": true
+  },
+  {
+   "source": "/firm-profile/:p(.*amnon.*)",
+   "destination": "/lawyers/amnon-dardik.html",
+   "permanent": true
+  },
+  {
+   "source": "/firm-profile/:p(.*dardik.*)",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/lawyers/amnon-dardik.html",
+   "permanent": true
+  },
+  {
+   "source": "/firm-profile/:p(.*dardik.*)",
+   "destination": "/lawyers/amnon-dardik.html",
+   "permanent": true
+  },
+  {
+   "source": "/firm-profile/:p(.*dan-gross.*)",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/lawyers/dan-gross.html",
+   "permanent": true
+  },
+  {
+   "source": "/firm-profile/:p(.*dan-gross.*)",
+   "destination": "/lawyers/dan-gross.html",
+   "permanent": true
+  },
+  {
+   "source": "/firm-profile/:p(.*gross-adv.*)",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/lawyers/dan-gross.html",
+   "permanent": true
+  },
+  {
+   "source": "/firm-profile/:p(.*gross-adv.*)",
+   "destination": "/lawyers/dan-gross.html",
+   "permanent": true
+  },
+  {
+   "source": "/firm-profile/:p(.*ezrati.*)",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/lawyers/asaf-ezrati.html",
+   "permanent": true
+  },
+  {
+   "source": "/firm-profile/:p(.*ezrati.*)",
+   "destination": "/lawyers/asaf-ezrati.html",
+   "permanent": true
+  },
+  {
+   "source": "/firm-profile/:p(.*galili.*)",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/lawyers/anat-galili.html",
+   "permanent": true
+  },
+  {
+   "source": "/firm-profile/:p(.*galili.*)",
+   "destination": "/lawyers/anat-galili.html",
+   "permanent": true
+  },
+  {
+   "source": "/firm-profile/:p(.*neeman.*)",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/lawyers/kobi-neeman.html",
+   "permanent": true
+  },
+  {
+   "source": "/firm-profile/:p(.*neeman.*)",
+   "destination": "/lawyers/kobi-neeman.html",
+   "permanent": true
+  },
+  {
+   "source": "/firm-profile/:p(.*feinstein.*)",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/lawyers/maly-feinstein.html",
+   "permanent": true
+  },
+  {
+   "source": "/firm-profile/:p(.*feinstein.*)",
+   "destination": "/lawyers/maly-feinstein.html",
+   "permanent": true
+  },
+  {
+   "source": "/firm-profile",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/about.html",
+   "permanent": true
+  },
+  {
+   "source": "/firm-profile",
+   "destination": "/about.html",
+   "permanent": true
+  },
+  {
+   "source": "/firm-profile/:p*",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/people.html",
+   "permanent": true
+  },
+  {
+   "source": "/firm-profile/:p*",
+   "destination": "/people.html",
+   "permanent": true
+  },
+  {
+   "source": "/immigration",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/practices/immigration-law.html",
+   "permanent": true
+  },
+  {
+   "source": "/immigration",
+   "destination": "/practices/immigration-law.html",
+   "permanent": true
+  },
+  {
+   "source": "/immigration/:p*",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/practices/immigration-law.html",
+   "permanent": true
+  },
+  {
+   "source": "/immigration/:p*",
+   "destination": "/practices/immigration-law.html",
+   "permanent": true
+  },
+  {
+   "source": "/areas-of-expertise/immigration",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/practices/immigration-law.html",
+   "permanent": true
+  },
+  {
+   "source": "/areas-of-expertise/immigration",
+   "destination": "/practices/immigration-law.html",
+   "permanent": true
+  },
+  {
+   "source": "/areas-of-expertise/aviation-maritime",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/practices/personal-law.html",
+   "permanent": true
+  },
+  {
+   "source": "/areas-of-expertise/aviation-maritime",
+   "destination": "/practices/personal-law.html",
+   "permanent": true
+  },
+  {
+   "source": "/:a(areas-of-expertise|628-2)/international-commercial-law",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/practices/civil-commercial.html",
+   "permanent": true
+  },
+  {
+   "source": "/:a(areas-of-expertise|628-2)/international-commercial-law",
+   "destination": "/practices/civil-commercial.html",
+   "permanent": true
+  },
+  {
+   "source": "/:a(areas-of-expertise|628-2)",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/expertise.html",
+   "permanent": true
+  },
+  {
+   "source": "/:a(areas-of-expertise|628-2)",
+   "destination": "/expertise.html",
+   "permanent": true
+  },
+  {
+   "source": "/:a(areas-of-expertise|628-2)/:p*",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/expertise.html",
+   "permanent": true
+  },
+  {
+   "source": "/:a(areas-of-expertise|628-2)/:p*",
+   "destination": "/expertise.html",
+   "permanent": true
+  },
+  {
+   "source": "/contact-us",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/contact.html",
+   "permanent": true
+  },
+  {
+   "source": "/contact-us",
+   "destination": "/contact.html",
+   "permanent": true
+  },
+  {
+   "source": "/contact",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/contact.html",
+   "permanent": true
+  },
+  {
+   "source": "/contact",
+   "destination": "/contact.html",
+   "permanent": true
+  },
+  {
+   "source": "/accessibility-statement",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/accessibility.html",
+   "permanent": true
+  },
+  {
+   "source": "/accessibility-statement",
+   "destination": "/accessibility.html",
+   "permanent": true
+  },
+  {
+   "source": "/among-top-israeli-law-firms",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/rankings.html",
+   "permanent": true
+  },
+  {
+   "source": "/among-top-israeli-law-firms",
+   "destination": "/rankings.html",
+   "permanent": true
+  },
+  {
+   "source": "/dg-alfa-international",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/rankings.html",
+   "permanent": true
+  },
+  {
+   "source": "/dg-alfa-international",
+   "destination": "/rankings.html",
+   "permanent": true
+  },
+  {
+   "source": "/doing-business-in-israel",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/about.html",
+   "permanent": true
+  },
+  {
+   "source": "/doing-business-in-israel",
+   "destination": "/about.html",
+   "permanent": true
+  },
+  {
+   "source": "/about-us",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/about.html",
+   "permanent": true
+  },
+  {
+   "source": "/about-us",
+   "destination": "/about.html",
+   "permanent": true
+  },
+  {
+   "source": "/about",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/about.html",
+   "permanent": true
+  },
+  {
+   "source": "/about",
+   "destination": "/about.html",
+   "permanent": true
+  },
+  {
+   "source": "/:p(%D7%A2%D7%9C%D7%99%D7%99%D7%94.*|עלייה.*)",
+   "destination": "/he/practices/immigration-law.html",
+   "permanent": true
+  },
+  {
+   "source": "/:p(%D7%93%D7%A8%D7%93%D7%99%D7%A7.*|דרדיק.*)",
+   "destination": "/he/rankings.html",
+   "permanent": true
+  },
+  {
+   "source": "/director-obligations-under-israeli-law:x*",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/news.html",
+   "permanent": true
+  },
+  {
+   "source": "/director-obligations-under-israeli-law:x*",
+   "destination": "/news.html",
+   "permanent": true
+  },
+  {
+   "source": "/establishing-a-bank-account:x*",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/news.html",
+   "permanent": true
+  },
+  {
+   "source": "/establishing-a-bank-account:x*",
+   "destination": "/news.html",
+   "permanent": true
+  },
+  {
+   "source": "/israel-work-permit:x*",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/news.html",
+   "permanent": true
+  },
+  {
+   "source": "/israel-work-permit:x*",
+   "destination": "/news.html",
+   "permanent": true
+  },
+  {
+   "source": "/",
+   "has": [
+    {
+     "type": "query",
+     "key": "p"
+    }
+   ],
+   "destination": "/",
+   "permanent": true
+  },
+  {
+   "source": "/:p((?!he/?$)[^.]+)",
+   "has": [
+    {
+     "type": "query",
+     "key": "lang",
+     "value": "he"
+    }
+   ],
+   "destination": "/he/",
+   "permanent": true
+  },
+  {
+   "source": "/:p((?!he/?$)[^.]+)",
+   "destination": "/",
+   "permanent": true
+  }
+ ]
+}
