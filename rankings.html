@@ -457,6 +457,64 @@
       });
     })();
   </script>
+<!-- Accessibility Code for "dglaw.co.il" -->
+<script>
+let sitelang = "EN";
+let position = "right";
+if (window.location.href.toLowerCase().indexOf("/he/") > 0) {
+	sitelang = "HE";
+	position = "left";
+}
+
+window.interdeal = {
+    get sitekey (){ return "ea8306ffb0450b5a0408cca90324cd59"} ,
+    get domains(){
+        return {
+            "js": "https://cdn.nagich.co.il/",
+            "acc": "https://access.nagich.co.il/"
+        }
+    },
+    "Position": position,
+    "Menulang": sitelang,
+    "draggable": true,
+    "btnStyle": {
+        "vPosition": [
+            "80%",
+            "80%"
+        ],
+        "margin": [
+            "0",
+            "0"
+        ],
+        "scale": [
+            "0.5",
+            "0.5"
+        ],
+        "color": {
+            "main": "#1c4bb6",
+            "second": "#ffffff"
+        },
+        "icon": {
+            "outline": true,
+            "outlineColor": "#ffffff",
+            "type":  1 ,
+            "shape": "circle"
+        }
+    },
+
+};
+
+(function(doc, head, body){
+    var coreCall             = doc.createElement('script');
+    coreCall.src             = interdeal.domains.js + 'core/5.3.1/accessibility.js';
+    coreCall.defer           = true;
+    coreCall.integrity       = 'sha512-3qLj5jbjMQnXk+FqEdVJjUnjJBGuBTRVOwaiT0ms6mQKQcrz4nulBxl2Hsr0/PpvEqdyJsMsU1NB+Mtfzw8hxA==';
+    coreCall.crossOrigin     = 'anonymous';
+    coreCall.setAttribute('data-cfasync', true );
+    body? body.appendChild(coreCall) : head.appendChild(coreCall);
+})(document, document.head, document.body);
+</script>
+<!-- End of Accessibility Code for "dglaw.co.il" -->
 <script src="accessibility.js"></script>
 </body>
 </html>

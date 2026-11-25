@@ -1,4 +1,4 @@
-/* Dardik Gross — accessibility toolbar (bottom-right), skip link and video pause controls.
+/* Dardik Gross — skip link, video pause controls, and a fallback accessibility toolbar (used only if the Nagich component is missing).
    Works on every page in English and Hebrew. Settings are remembered in this browser. */
 (function () {
   if (window.__dgA11y) return; window.__dgA11y = true;
@@ -26,6 +26,10 @@
   var KEYS = Object.keys(T.opts);
   var KEY = 'dg-a11y-settings', state = { size: 0 };
   try { state = JSON.parse(localStorage.getItem(KEY)) || state; } catch (e) {}
+  /* The official Nagich accessibility component (window.interdeal) is the site's accessibility menu.
+     When it is present this script only adds the skip link and the video pause buttons. */
+  var vendor = !!window.interdeal;
+  if (vendor) { state = { size: 0 }; try { localStorage.removeItem(KEY); } catch (e) {} }
   function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
 
   /* ---------- text size (works with px-based styles) ---------- */
@@ -81,6 +85,7 @@
     if (main) { if (!main.id) main.id = 'dg-main'; if (!main.hasAttribute('tabindex')) main.setAttribute('tabindex', '-1'); if (main.tagName !== 'MAIN' && !main.getAttribute('role')) main.setAttribute('role', 'main'); }
     var skip = doc.createElement('a'); skip.className = 'dg-skip'; skip.href = '#' + (main ? main.id : ''); skip.textContent = T.skip;
     doc.body.insertBefore(skip, doc.body.firstChild);
+    if (vendor) return;
 
     var w = doc.createElement('div'); w.className = 'dg-a11y'; w.setAttribute('dir', he ? 'rtl' : 'ltr'); w.setAttribute('lang', he ? 'he' : 'en');
     var opts = '';
